@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  server:
+    image: appfollow/parser:latest
+    build: .
+    command: "python /app/appfollow_parser/server.py"
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/app
+
